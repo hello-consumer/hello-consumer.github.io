@@ -15,7 +15,19 @@
     <header>
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <sub>{{ site.description | default: site.github.project_tagline }}</sub>
-        {% include navigation.html context="/" %}
+        <ul>
+    {% if include.context == "/" %}
+        <li class="{% if page.url == "/" %}active{% endif %}">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </li>
+    {% endif %}
+        {% for page in site.pages %}
+            <li class="{% if page.url contains entry.url %}active{% endif %}">
+                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+        {% endfor %}
+</ul>
+
     </header>
     <main> {{ content }} </main>
     <footer>
