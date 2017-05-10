@@ -21,7 +21,7 @@
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
         </li>
     {% endif %}
-        {% for p in site.html_files | sort:order %}
+        {% for p in site.pages | sort:order %}
             <li class="{% if page.url contains p.url %}active{% endif %}">
                 <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
             </li>
