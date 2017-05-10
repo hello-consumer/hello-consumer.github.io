@@ -15,6 +15,7 @@
     <header>
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <sub>{{ site.description | default: site.github.project_tagline }}</sub>
+        {% include navigation.html context="/" %}
     </header>
     <main> {{ content }} </main>
     <footer>
