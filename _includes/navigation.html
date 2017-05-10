@@ -5,7 +5,9 @@
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
         </li>
     {% endif %}
-
+        {% for page in site.pages %}
+            <li><a>New Page</a></li>
+        {% endfor %}
     {% assign entries = site.pages %}
     {% for entry in entries %}
 
