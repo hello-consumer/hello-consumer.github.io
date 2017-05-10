@@ -17,15 +17,17 @@
     <header>
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <sub>{{ site.description | default: site.github.project_tagline }}</sub>
-        <ul>
-            {% for p in site.pages | sort:order %}
-            {% unless p.url contains '.css' %}
-            <li>
-                <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-            </li>
-            {% endunless %}
-            {% endfor %}
-        </ul>
+        <nav>
+            <ul>
+                {% for p in site.pages | sort:order %}
+                {% unless p.url contains '.css' %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+                </li>
+                {% endunless %}
+                {% endfor %}
+            </ul>
+        </nav>
     </header>
     <main> {{ content }} </main>
     <footer>

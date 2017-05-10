@@ -40,6 +40,10 @@ header {
         color: #aaa;
         letter-spacing: -1px;
     }
+    nav > ul{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 
