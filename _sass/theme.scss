@@ -27,6 +27,9 @@ header {
     top:0px;
     display: flex;
     flex-direction: row;
+    &>*{
+        flex:1 100%;
+    }
     h1 {
         font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif;
         font-size: 3em;
