@@ -22,9 +22,11 @@
         </li>
     {% endif %}
         {% for p in site.pages | sort:order %}
+            {% unless p.url contains '.css' %}
             <li class="{% if page.url contains p.url %}active{% endif %}">
                 <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
             </li>
+            {% endunless %}
         {% endfor %}
 </ul>
 
