@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <header class="clearfix">
+    <header>
         <h1>{{ site.title | default: site.github.repository_name }}
             <sub>{{ site.description | default: site.github.project_tagline }}</sub>
         </h1>
         <nav>
-            <ul class="clearfix">
+            <ul>
                 {% for p in site.pages | sort:order %}
                 {% unless p.url contains '.css' %}
                 <li>
