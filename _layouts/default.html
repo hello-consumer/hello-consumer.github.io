@@ -21,9 +21,9 @@
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
         </li>
     {% endif %}
-        {% for page in site.pages %}
-            <li class="{% if page.url contains entry.url %}active{% endif %}">
-                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+        {% for p in site.pages %}
+            <li class="{% if page.url contains p.url %}active{% endif %}">
+                <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
             </li>
         {% endfor %}
 </ul>
