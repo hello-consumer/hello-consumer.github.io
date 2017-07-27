@@ -17,7 +17,7 @@ window.onresize = resizeCanvas;
 resizeCanvas();
 
 
-gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+gl = can.getContext('webgl') || can.getContext('experimental-webgl');
 
 // Set clear color to black, fully opaque
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
