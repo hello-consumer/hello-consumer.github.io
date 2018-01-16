@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## Professional Experience
-
+Coding Temple | June 2016 | Current
 
 ## Education
 
