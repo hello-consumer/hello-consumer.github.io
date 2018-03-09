@@ -22,12 +22,13 @@
         </h1>
         <nav>
             <ul>
-                {% for p in site.pages | sort:order %}
-                {% unless p.url contains '.css' %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-                </li>
-                {% endunless %}
+                {% assign sorted_pages = site.pages | sort:"order" %}
+                {% for p in sorted_pages %}
+                    {% unless p.url contains '.css' %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+                    </li>
+                    {% endunless %}
                 {% endfor %}
             </ul>
         </nav>
